@@ -1,9 +1,9 @@
-# One-Sheet Game Design Document
+# Stuck On You One-Sheet Game Design Document
 
 **Platform:** Desktop, Android
 
-**Target player age:** 12-35
+**Target player age:** 15-35
 
-**Intended ESRB rating:** T
+**Intended ESRB rating:** M
 
 **Summary:** 
