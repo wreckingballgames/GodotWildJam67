@@ -12,6 +12,7 @@ texture = ExtResource("2_mkhqf")
 centered = false
 
 [node name="CollisionDetector" type="Area2D" parent="."]
+unique_name_in_owner = true
 collision_mask = 14
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionDetector"]

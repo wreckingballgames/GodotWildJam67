@@ -6,8 +6,16 @@ public partial class OverworldActor : Node2D
     [Export]
     protected OverworldActorController Controller {get; set;}
 
+    private Vector2 LastPosition {get; set;}
+    protected Area2D CollisionDetector {get; set;}
+
     public override void _Ready()
     {
+        // Get references to children
+        CollisionDetector = GetNode<Area2D>("%CollisionDetector");
+
+        // Connect signals
+        CollisionDetector.BodyEntered += (Node2D body) => HandleCollision(body);
         Controller.CommandDispatched += (Command command) => OnCommandReceived(command);
     }
 
@@ -50,7 +58,17 @@ public partial class OverworldActor : Node2D
             newGlobalPosition.Y += GameConstants.TILE_HEIGHT;
         }
 
+        // Store LastPosition for use elsewhere, update GlobalPosition
+        LastPosition = GlobalPosition;
         GlobalPosition = newGlobalPosition;
+    }
+
+    private void HandleCollision(Node2D body)
+    {
+        if (body is TileMap)
+        {
+            GlobalPosition = LastPosition;
+        }
     }
 
     /// <summary>
