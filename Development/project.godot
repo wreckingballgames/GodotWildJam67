@@ -1,0 +1,35 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="StuckOnYou"
+config/features=PackedStringArray("4.2", "Mobile")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=576
+window/size/viewport_height=324
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="viewport"
+
+[dotnet]
+
+project/assembly_name="Development"
+
+[editor]
+
+movie_writer/movie_file="C:/Users/micro/OneDrive/Documents/repos/GodotWildJam67/demos/demo.avi"
+
+[rendering]
+
+renderer/rendering_method="mobile"
