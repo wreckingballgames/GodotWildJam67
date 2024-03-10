@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="default" tilewidth="32" tileheight="32" tilecount="15" columns="0">
+<tileset version="1.10" tiledversion="1.10.2" name="default" tilewidth="32" tileheight="32" tilecount="22" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <properties>
@@ -108,5 +108,26 @@
    <property name="Trigger" type="bool" value="false"/>
   </properties>
   <image width="32" height="32" source="corner_fence4.png"/>
+ </tile>
+ <tile id="28">
+  <image width="32" height="32" source="mountain.png"/>
+ </tile>
+ <tile id="29">
+  <image width="32" height="32" source="horizontal_path.png"/>
+ </tile>
+ <tile id="30">
+  <image width="32" height="32" source="vertical_path.png"/>
+ </tile>
+ <tile id="35">
+  <image width="32" height="32" source="corner_path1.png"/>
+ </tile>
+ <tile id="36">
+  <image width="32" height="32" source="corner_path2.png"/>
+ </tile>
+ <tile id="37">
+  <image width="32" height="32" source="corner_path3.png"/>
+ </tile>
+ <tile id="38">
+  <image width="32" height="32" source="corner_path4.png"/>
  </tile>
 </tileset>

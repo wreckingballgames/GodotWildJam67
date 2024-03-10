@@ -15,11 +15,11 @@
             "scaleInEditor": 3
         },
         "field.tmx": {
-            "scale": 2,
-            "selectedLayer": 3,
+            "scale": 0.75,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 351.25,
-                "y": 248.5
+                "x": 324.6666666666667,
+                "y": 237.3333333333333
             }
         }
     },
