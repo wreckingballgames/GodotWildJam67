@@ -1,11 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://gyq4s1c4pcig"]
+[gd_scene load_steps=5 format=3 uid="uid://gyq4s1c4pcig"]
 
 [ext_resource type="PackedScene" uid="uid://t4c1xjtmqty3" path="res://scenes/overworld_actors/overworld_actor.tscn" id="1_o1h44"]
 [ext_resource type="Script" path="res://scripts/actors/player/OverworldPlayer.cs" id="2_17x6y"]
 [ext_resource type="PackedScene" uid="uid://b5lh71kpe0ne7" path="res://scenes/overworld_actors/player/overworld_player_controller.tscn" id="3_t7b23"]
+[ext_resource type="Texture2D" uid="uid://6grikndlwu3w" path="res://assets/sprites/Andere_overworld.png" id="4_j7vnu"]
 
 [node name="OverworldPlayer" node_paths=PackedStringArray("Controller") instance=ExtResource("1_o1h44")]
 script = ExtResource("2_17x6y")
 Controller = NodePath("OverworldPlayerController")
 
 [node name="OverworldPlayerController" parent="." index="0" instance=ExtResource("3_t7b23")]
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(1, 1)
+texture = ExtResource("4_j7vnu")
