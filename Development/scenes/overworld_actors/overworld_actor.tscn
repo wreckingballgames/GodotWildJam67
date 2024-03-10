@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/actors/OverworldActor.cs" id="1_gynun"]
 [ext_resource type="Texture2D" uid="uid://6grikndlwu3w" path="res://assets/sprites/Andere_overworld.png" id="2_mkhqf"]
-[ext_resource type="Shape2D" uid="uid://cyujvsm64clud" path="res://resources/actor_shape.tres" id="3_dcvin"]
+[ext_resource type="Shape2D" uid="uid://cyujvsm64clud" path="res://resources/actor_shape.tres" id="3_kmdae"]
 
 [node name="OverworldActor" type="Node2D"]
 script = ExtResource("1_gynun")
@@ -16,4 +16,4 @@ collision_mask = 14
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionDetector"]
 position = Vector2(16, 32)
-shape = ExtResource("3_dcvin")
+shape = ExtResource("3_kmdae")

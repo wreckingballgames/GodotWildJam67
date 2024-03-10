@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="16" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="1">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="16" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="1">
+ <properties>
+  <property name="tilesetResPath" value="res://resources/default_tileset.tres"/>
+ </properties>
  <tileset firstgid="1" source="default.tsx"/>
  <layer id="1" name="grass" width="20" height="16">
   <data encoding="csv">
@@ -41,7 +44,7 @@
 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10
 </data>
  </layer>
- <layer id="3" name="obstacles" width="20" height="16">
+ <layer id="3" name="fences" width="20" height="16">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

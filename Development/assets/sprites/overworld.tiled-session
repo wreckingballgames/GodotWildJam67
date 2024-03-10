@@ -32,6 +32,7 @@
         "field.tmx"
     ],
     "project": "overworld.tiled-project",
+    "property.type": "string",
     "recentFiles": [
         "default.tsx",
         "field.tmx"
