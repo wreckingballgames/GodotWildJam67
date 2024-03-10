@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://txxggxuke2rt"]
+
+[ext_resource type="Shape2D" uid="uid://boygt5yjj4r15" path="res://resources/tile_shape.tres" id="1_rcqdc"]
+
+[node name="OverworldObstacle" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("1_rcqdc")
