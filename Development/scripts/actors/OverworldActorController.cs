@@ -1,32 +1,34 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-public abstract partial class OverworldActorController : Node
+public partial class OverworldActorController : Node
 {
     [Signal]
     public delegate void CommandDispatchedEventHandler(Command command);
 
-    protected List<Command> Commands {get; set;}
+    protected List<Command> Commands {get; set;} = new();
+
+    public override void _Process(double _delta)
+    {
+        DispatchCommandSequence();
+    }
 
     /// <summary>
     /// Handle input to determine which commands to dispatch.
     /// </summary>
     protected virtual void HandleInput()
     {
-        // Pseudocode
-        // Read input source for next input
-        // Process input (is it valid? does it cause a return or does it compound?)
-        // Add command to list of commands accordingly
-        // Return
     }
 
     /// <summary>
     /// Emit a signal with the command to dispatch, ideally received by the
     /// actor this controller is controlling. To be used in DispatchCommandSequence().
     /// </summary>
-    protected virtual void DispatchCommand()
+    protected virtual void DispatchCommand(Command command)
     {
+        EmitSignal(SignalName.CommandDispatched, command);
     }
 
     /// <summary>
@@ -34,5 +36,16 @@ public abstract partial class OverworldActorController : Node
     /// </summary>
     protected virtual void DispatchCommandSequence()
     {
+        if (!Commands.Any())
+        {
+            return;
+        }
+
+        foreach (Command command in Commands)
+        {
+            DispatchCommand(command);
+        }
+
+        Commands.Clear();
     }
 }

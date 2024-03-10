@@ -1,6 +1,12 @@
 using Godot;
 using System;
 
-public abstract partial class Command : Node
+public partial class Command : RefCounted
 {
+    public CommandType Type {get;}
+
+    public Command(CommandType type)
+    {
+        Type = type;
+    }
 }
