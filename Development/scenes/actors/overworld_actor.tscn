@@ -1,10 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://t4c1xjtmqty3"]
+[gd_scene load_steps=4 format=3 uid="uid://t4c1xjtmqty3"]
 
 [ext_resource type="Script" path="res://scripts/actors/OverworldActor.cs" id="1_gynun"]
 [ext_resource type="Texture2D" uid="uid://byo7g6esqrno1" path="res://icon.svg" id="1_u40aq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvq2v"]
+size = Vector2(32, 64)
 
 [node name="OverworldActor" type="Node2D"]
 script = ExtResource("1_gynun")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.5)
 texture = ExtResource("1_u40aq")
+centered = false
+
+[node name="CollisionDetector" type="Area2D" parent="."]
+collision_mask = 14
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionDetector"]
+position = Vector2(16, 32)
+shape = SubResource("RectangleShape2D_rvq2v")

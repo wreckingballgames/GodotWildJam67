@@ -64,18 +64,18 @@ public partial class OverworldActor : Node2D
         {
             GlobalPosition = GlobalPosition with { X = viewportRect.Position.X };
         }
-        else if (GlobalPosition.X > viewportRect.Size.X)
+        else if (GlobalPosition.X >= viewportRect.Size.X)
         {
-            GlobalPosition = GlobalPosition with { X = viewportRect.Size.X };
+            GlobalPosition = GlobalPosition with { X = viewportRect.Size.X - GameConstants.TILE_WIDTH };
         }
 
         if (GlobalPosition.Y < viewportRect.Position.Y)
         {
             GlobalPosition = GlobalPosition with { Y = viewportRect.Position.Y };
         }
-        else if (GlobalPosition.Y > viewportRect.Size.Y)
+        else if (GlobalPosition.Y >= viewportRect.Size.Y)
         {
-            GlobalPosition = GlobalPosition with { Y = viewportRect.Size.Y };
+            GlobalPosition = GlobalPosition with { Y = viewportRect.Size.Y - GameConstants.TILE_HEIGHT };
         }
     }
 }
