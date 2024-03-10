@@ -1,6 +1,10 @@
-[gd_scene format=3 uid="uid://d2nt3tjerrerm"]
+[gd_scene load_steps=2 format=3 uid="uid://d2nt3tjerrerm"]
+
+[ext_resource type="PackedScene" uid="uid://gyq4s1c4pcig" path="res://scenes/overworld_actors/player/overworld_player.tscn" id="1_qidbb"]
 
 [node name="World" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
+
+[node name="OverworldPlayer" parent="." instance=ExtResource("1_qidbb")]
