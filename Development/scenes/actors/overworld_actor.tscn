@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://t4c1xjtmqty3"]
+
+[ext_resource type="Script" path="res://scripts/actors/OverworldActor.cs" id="1_gynun"]
+[ext_resource type="Texture2D" uid="uid://byo7g6esqrno1" path="res://icon.svg" id="1_u40aq"]
+
+[node name="OverworldActor" type="Node2D"]
+script = ExtResource("1_gynun")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u40aq")
