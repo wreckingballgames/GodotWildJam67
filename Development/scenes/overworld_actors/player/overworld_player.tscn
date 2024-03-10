@@ -12,5 +12,4 @@ Controller = NodePath("OverworldPlayerController")
 [node name="OverworldPlayerController" parent="." index="0" instance=ExtResource("3_t7b23")]
 
 [node name="Sprite2D" parent="." index="1"]
-scale = Vector2(1, 1)
 texture = ExtResource("4_j7vnu")
