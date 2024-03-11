@@ -7,6 +7,8 @@
 
 [node name="EventManager" parent="." instance=ExtResource("1_31lx6")]
 
+[node name="TriggerZones" type="Node" parent="."]
+
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
 
