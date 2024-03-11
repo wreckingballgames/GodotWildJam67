@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://tsy60efceyyi"]
+
+[ext_resource type="Shape2D" uid="uid://boygt5yjj4r15" path="res://resources/shapes/tile_shape.tres" id="1_1wadp"]
+
+[node name="TriggerZone" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("1_1wadp")

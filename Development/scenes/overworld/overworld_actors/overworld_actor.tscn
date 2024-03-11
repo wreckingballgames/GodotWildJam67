@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://t4c1xjtmqty3"]
 
-[ext_resource type="Script" path="res://scripts/overworld_actors/overworld_actor.gd" id="1_xb6pg"]
+[ext_resource type="Script" path="res://scripts/overworld/overworld_actors/overworld_actor.gd" id="1_xb6pg"]
 [ext_resource type="Texture2D" uid="uid://dd5bcajmwt2sd" path="res://assets/sprites/Andere_overworld_tile_size.png" id="2_i6po5"]
 [ext_resource type="Shape2D" uid="uid://boygt5yjj4r15" path="res://resources/shapes/tile_shape.tres" id="3_3x4ke"]
 [ext_resource type="Shape2D" uid="uid://c2ywddh4nihmd" path="res://resources/shapes/collider_shape.tres" id="3_rauw5"]

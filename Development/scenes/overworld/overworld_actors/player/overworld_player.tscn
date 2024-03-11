@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://gyq4s1c4pcig"]
 
-[ext_resource type="PackedScene" uid="uid://t4c1xjtmqty3" path="res://scenes/overworld_actors/overworld_actor.tscn" id="1_o1h44"]
-[ext_resource type="Script" path="res://scripts/overworld_actors/player/overworld_player.gd" id="2_pvyb6"]
-[ext_resource type="PackedScene" uid="uid://b5lh71kpe0ne7" path="res://scenes/overworld_actors/player/overworld_player_controller.tscn" id="3_t7b23"]
+[ext_resource type="PackedScene" uid="uid://t4c1xjtmqty3" path="res://scenes/overworld/overworld_actors/overworld_actor.tscn" id="1_o1h44"]
+[ext_resource type="Script" path="res://scripts/overworld/overworld_actors/player/overworld_player.gd" id="2_pvyb6"]
+[ext_resource type="PackedScene" uid="uid://b5lh71kpe0ne7" path="res://scenes/overworld/overworld_actors/player/overworld_player_controller.tscn" id="3_t7b23"]
 [ext_resource type="Shape2D" uid="uid://c2ywddh4nihmd" path="res://resources/shapes/collider_shape.tres" id="4_v1itr"]
 
 [node name="OverworldPlayer" node_paths=PackedStringArray("interact_collider", "controller") instance=ExtResource("1_o1h44")]
