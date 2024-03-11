@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2nt3tjerrerm"]
+[gd_scene load_steps=3 format=3 uid="uid://d2nt3tjerrerm"]
 
-[ext_resource type="PackedScene" uid="uid://gyq4s1c4pcig" path="res://scenes/overworld/overworld_actors/overworld_player/overworld_player.tscn" id="1_qidbb"]
+[ext_resource type="PackedScene" uid="uid://dkxdkgfdcxjct" path="res://scenes/general/event_manager.tscn" id="1_31lx6"]
+[ext_resource type="PackedScene" uid="uid://gyq4s1c4pcig" path="res://scenes/overworld/overworld_actors/overworld_player/overworld_player.tscn" id="2_nymq0"]
 
 [node name="World" type="Node2D"]
+
+[node name="EventManager" parent="." instance=ExtResource("1_31lx6")]
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
 
-[node name="OverworldPlayer" parent="." instance=ExtResource("1_qidbb")]
+[node name="OverworldPlayer" parent="." instance=ExtResource("2_nymq0")]

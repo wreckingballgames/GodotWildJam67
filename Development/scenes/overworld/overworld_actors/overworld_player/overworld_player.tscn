@@ -1,20 +1,21 @@
 [gd_scene load_steps=5 format=3 uid="uid://gyq4s1c4pcig"]
 
-[ext_resource type="PackedScene" uid="uid://t4c1xjtmqty3" path="res://scenes/overworld/overworld_actors/overworld_actor.tscn" id="1_o1h44"]
-[ext_resource type="Script" path="res://scripts/overworld/overworld_actors/overworld_player/overworld_player.gd" id="2_pvyb6"]
-[ext_resource type="PackedScene" uid="uid://b5lh71kpe0ne7" path="res://scenes/overworld/overworld_actors/overworld_player/overworld_player_controller.tscn" id="3_t7b23"]
-[ext_resource type="Shape2D" uid="uid://c2ywddh4nihmd" path="res://resources/shapes/collider_shape.tres" id="4_v1itr"]
+[ext_resource type="PackedScene" uid="uid://t4c1xjtmqty3" path="res://scenes/overworld/overworld_actors/overworld_actor.tscn" id="1_bg7q0"]
+[ext_resource type="Script" path="res://scripts/overworld/overworld_actors/overworld_player/overworld_player.gd" id="2_36iq2"]
+[ext_resource type="PackedScene" uid="uid://b5lh71kpe0ne7" path="res://scenes/overworld/overworld_actors/overworld_player/overworld_player_controller.tscn" id="3_pmcjl"]
+[ext_resource type="Shape2D" uid="uid://c2ywddh4nihmd" path="res://resources/shapes/collider_shape.tres" id="4_j5aq6"]
 
-[node name="OverworldPlayer" node_paths=PackedStringArray("interact_collider", "controller") instance=ExtResource("1_o1h44")]
-script = ExtResource("2_pvyb6")
+[node name="OverworldPlayer" node_paths=PackedStringArray("interact_collider", "controller") instance=ExtResource("1_bg7q0")]
+script = ExtResource("2_36iq2")
 interact_collider = NodePath("InteractCollider")
 controller = NodePath("OverworldPlayerController")
 
-[node name="OverworldPlayerController" parent="." index="0" instance=ExtResource("3_t7b23")]
+[node name="OverworldPlayerController" parent="." index="0" instance=ExtResource("3_pmcjl")]
 
 [node name="InteractCollider" type="Area2D" parent="." index="5"]
+collision_layer = 0
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractCollider" index="0"]
-shape = ExtResource("4_v1itr")
+shape = ExtResource("4_j5aq6")
 debug_color = Color(0.847059, 0.286275, 0.623529, 0.419608)
