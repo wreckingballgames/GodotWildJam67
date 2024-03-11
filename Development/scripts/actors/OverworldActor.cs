@@ -7,15 +7,21 @@ public partial class OverworldActor : Node2D
     protected OverworldActorController Controller {get; set;}
 
     private Vector2 LastPosition {get; set;}
-    protected Area2D CollisionDetector {get; set;}
+    protected Area2D ObstacleCollider {get; set;}
+    protected Area2D TriggerCollider {get; set;}
+    protected Area2D HazardCollider {get; set;}
 
     public override void _Ready()
     {
         // Get references to children
-        CollisionDetector = GetNode<Area2D>("%CollisionDetector");
+        ObstacleCollider = GetNode<Area2D>("%ObstacleCollider");
+        TriggerCollider = GetNode<Area2D>("%TriggerCollider");
+        HazardCollider = GetNode<Area2D>("%HazardCollider");
 
         // Connect signals
-        CollisionDetector.BodyEntered += (Node2D body) => HandleCollision(body);
+        ObstacleCollider.BodyEntered += (Node2D body) => HandleObstacleCollision(body);
+        TriggerCollider.BodyEntered += (Node2D body) => HandleTriggerCollision(body);
+        HazardCollider.BodyEntered += (Node2D body) => HandleHazardCollision(body);
         Controller.CommandDispatched += (Command command) => OnCommandReceived(command);
     }
 
@@ -63,12 +69,17 @@ public partial class OverworldActor : Node2D
         GlobalPosition = newGlobalPosition;
     }
 
-    private void HandleCollision(Node2D body)
+    private void HandleObstacleCollision(Node2D body)
     {
-        if (body is TileMap)
-        {
-            GlobalPosition = LastPosition;
-        }
+        GlobalPosition = LastPosition;
+    }
+
+    protected virtual void HandleTriggerCollision(Node2D body)
+    {
+    }
+
+    protected virtual void HandleHazardCollision(Node2D body)
+    {
     }
 
     /// <summary>

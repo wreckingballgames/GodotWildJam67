@@ -10,4 +10,4 @@ Controller = NodePath("OverworldPlayerController")
 
 [node name="OverworldPlayerController" parent="." index="0" instance=ExtResource("3_t7b23")]
 
-[node name="Camera2D" type="Camera2D" parent="." index="3"]
+[node name="Camera2D" type="Camera2D" parent="." index="1"]
