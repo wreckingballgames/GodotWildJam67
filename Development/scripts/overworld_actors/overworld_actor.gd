@@ -19,7 +19,6 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-    enforce_screen_bounds()
     update_obstacle_collider_position()
 
 
@@ -71,16 +70,3 @@ func handle_trigger_collision(body: Node2D) -> void:
 func handle_hazard_collision(body: Node2D) -> void:
     pass
 
-
-func enforce_screen_bounds() -> void:
-    var viewport_rect: Rect2 = get_viewport_rect()
-    
-    if global_position.x < viewport_rect.position.x:
-        global_position.x = viewport_rect.position.x
-    elif global_position.x >= viewport_rect.size.x:
-        global_position.x = viewport_rect.size.x - GlobalData.TileInfo.TILE_WIDTH
-    
-    if global_position.y < viewport_rect.position.y:
-        global_position.y = viewport_rect.position.y
-    elif global_position.y >= viewport_rect.size.y:
-        global_position.y = viewport_rect.size.y - GlobalData.TileInfo.TILE_HEIGHT
