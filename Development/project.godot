@@ -88,6 +88,7 @@ dialogic_default_action={
 2d_physics/layer_2="overworld_obstacle"
 2d_physics/layer_3="overworld_trigger"
 2d_physics/layer_4="overworld_hazard"
+2d_physics/layer_5="overworld_interactable"
 
 [rendering]
 

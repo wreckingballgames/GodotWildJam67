@@ -25,9 +25,14 @@ func _physics_process(delta: float) -> void:
 func on_command_received(command: Command) -> void:
     if command.type == GlobalData.CommandType.Move:
         handle_movement(command as MoveCommand)
+    elif command.type == GlobalData.CommandType.Interact:
+        print("interact action pressed")
 
 
 func handle_movement(command: MoveCommand) -> void:
+    if command == null:
+        return
+    
     # If forward is not the same direction as command direction, turn, don't move
     # Otherwise, move in that direction (i.e., the direction the actor is already facing)
     if forward != command.direction:

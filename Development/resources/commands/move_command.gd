@@ -5,5 +5,5 @@ extends Command
 var direction: Vector2 = Vector2.RIGHT
 
 
-func _ready() -> void:
+func _init() -> void:
     type = GlobalData.CommandType.Move

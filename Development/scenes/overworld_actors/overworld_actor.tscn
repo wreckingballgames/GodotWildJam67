@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dd5bcajmwt2sd" path="res://assets/sprites/Andere_overworld_tile_size.png" id="2_i6po5"]
 [ext_resource type="Shape2D" uid="uid://c2ywddh4nihmd" path="res://resources/shapes/collider_shape.tres" id="3_rauw5"]
 
-[node name="OverworldActor" type="Node2D"]
+[node name="OverworldActor" type="Node2D" groups=["interactable"]]
 script = ExtResource("1_xb6pg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
