@@ -12,11 +12,12 @@ config_version=5
 
 config/name="StuckOnYou"
 run/main_scene="res://scenes/main.tscn"
-config/features=PackedStringArray("4.2", "C#", "Mobile")
+config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://assets/sprites/Tranger_portrait.png"
 
 [autoload]
 
+GlobalData="*res://scripts/autoload/global_data.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
