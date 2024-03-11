@@ -1,11 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://t4c1xjtmqty3"]
+[gd_scene load_steps=5 format=3 uid="uid://t4c1xjtmqty3"]
 
 [ext_resource type="Script" path="res://scripts/overworld_actors/overworld_actor.gd" id="1_xb6pg"]
 [ext_resource type="Texture2D" uid="uid://dd5bcajmwt2sd" path="res://assets/sprites/Andere_overworld_tile_size.png" id="2_i6po5"]
+[ext_resource type="Shape2D" uid="uid://boygt5yjj4r15" path="res://resources/shapes/tile_shape.tres" id="3_3x4ke"]
 [ext_resource type="Shape2D" uid="uid://c2ywddh4nihmd" path="res://resources/shapes/collider_shape.tres" id="3_rauw5"]
 
-[node name="OverworldActor" type="Node2D" groups=["interactable"]]
+[node name="OverworldActor" type="Node2D" node_paths=PackedStringArray("obstacle_collider", "trigger_collider", "hazard_collider")]
 script = ExtResource("1_xb6pg")
+obstacle_collider = NodePath("ObstacleCollider")
+trigger_collider = NodePath("TriggerCollider")
+hazard_collider = NodePath("HazardCollider")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_i6po5")
@@ -27,3 +31,11 @@ collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HazardCollider"]
 shape = ExtResource("3_rauw5")
+
+[node name="InteractableArea" type="Area2D" parent="." groups=["interactable"]]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
+shape = ExtResource("3_3x4ke")
+debug_color = Color(0.305882, 0.619608, 0.309804, 0.419608)

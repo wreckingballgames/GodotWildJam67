@@ -4,21 +4,31 @@ extends OverworldActor
 
 @export var interact_collider: Area2D
 
-var targeted_interactable: Node2D
+var target_interactable: Node2D
 
 
 func _ready() -> void:
     super._ready()
     
     # Connect signals
-    interact_collider.body_entered.connect(on_interact_collider_body_entered)
-    interact_collider.body_exited.connect(on_interact_collider_body_exited)
+    interact_collider.area_entered.connect(on_interact_collider_area_entered)
+    interact_collider.area_exited.connect(on_interact_collider_area_exited)
 
 
-func on_interact_collider_body_entered(body: Node2D) -> void:
-    if body.is_in_group("interactable"):
-        targeted_interactable = body
+func _physics_process(delta: float) -> void:
+    super._physics_process(delta)
+    
+    update_collider_position(interact_collider)
 
 
-func on_interact_collider_body_exited(body: Node2D) -> void:
-    targeted_interactable = null
+func handle_interaction() -> void:
+    print(target_interactable)
+
+
+func on_interact_collider_area_entered(area: Area2D) -> void:
+    if area.is_in_group("interactable"):
+        target_interactable = area
+
+
+func on_interact_collider_area_exited(area: Area2D) -> void:
+    target_interactable = null

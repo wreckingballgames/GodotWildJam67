@@ -19,14 +19,14 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-    update_obstacle_collider_position()
+    update_collider_position(obstacle_collider)
 
 
 func on_command_received(command: Command) -> void:
     if command.type == GlobalData.CommandType.Move:
         handle_movement(command as MoveCommand)
     elif command.type == GlobalData.CommandType.Interact:
-        print("interact action pressed")
+        handle_interaction()
 
 
 func handle_movement(command: MoveCommand) -> void:
@@ -53,11 +53,16 @@ func handle_movement(command: MoveCommand) -> void:
         global_position.y += GlobalData.TileInfo.TILE_HEIGHT
 
 
-func update_obstacle_collider_position() -> void:
+func handle_interaction() -> void:
+    pass
+
+
+## Used to update certain colliders to stick out ahead of OverworldPlayer.
+func update_collider_position(collider: Area2D) -> void:
     if forward == Vector2.LEFT or forward == Vector2.RIGHT:
-        obstacle_collider.global_position = global_position + (forward * GlobalData.TileInfo.TILE_CENTER_X)
+        collider.global_position = global_position + (forward * GlobalData.TileInfo.TILE_CENTER_X)
     if forward == Vector2.UP or forward == Vector2.DOWN:
-        obstacle_collider.global_position = global_position + (forward * GlobalData.TileInfo.TILE_CENTER_Y)
+        collider.global_position = global_position + (forward * GlobalData.TileInfo.TILE_CENTER_Y)
 
 
 func _on_obstacle_collider_body_entered(body: Node2D) -> void:
@@ -66,12 +71,3 @@ func _on_obstacle_collider_body_entered(body: Node2D) -> void:
 
 func _on_obstacle_collider_body_exited(body: Node2D) -> void:
     is_obstacle_ahead = false
-
-
-func handle_trigger_collision(body: Node2D) -> void:
-    pass
-
-
-func handle_hazard_collision(body: Node2D) -> void:
-    pass
-

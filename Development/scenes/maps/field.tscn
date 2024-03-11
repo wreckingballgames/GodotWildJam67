@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgogvjq6vbebu"]
+[gd_scene load_steps=5 format=3 uid="uid://dgogvjq6vbebu"]
 
 [ext_resource type="PackedScene" uid="uid://d2nt3tjerrerm" path="res://scenes/maps/world.tscn" id="1_70f8m"]
 [ext_resource type="TileSet" uid="uid://n3iwxkx3ulvv" path="res://resources/default_overworld_tileset.tres" id="2_tr021"]
+[ext_resource type="PackedScene" uid="uid://t4c1xjtmqty3" path="res://scenes/overworld_actors/overworld_actor.tscn" id="3_teob0"]
+[ext_resource type="PackedScene" uid="uid://qaismx24xads" path="res://scenes/overworld_actors/overworld_actor_controller.tscn" id="4_bi56g"]
 
 [node name="Field" instance=ExtResource("1_70f8m")]
 
@@ -20,5 +22,13 @@ layer_4/tile_data = PackedInt32Array(524305, 983041, 0, 524306, 983041, 0, 13107
 layer_5/name = "paths"
 layer_5/tile_data = PackedInt32Array(65540, 1245185, 0, 131076, 262145, 0, 131077, 851969, 0)
 
-[node name="OverworldPlayer" parent="." index="1"]
+[node name="OverworldPlayer" parent="." index="1" groups=["interactable"]]
 position = Vector2(336, 272)
+
+[node name="InteractableTest" parent="." index="2" node_paths=PackedStringArray("controller") instance=ExtResource("3_teob0")]
+position = Vector2(273, 144)
+controller = NodePath("OverworldActorController")
+
+[node name="OverworldActorController" parent="InteractableTest" index="4" instance=ExtResource("4_bi56g")]
+
+[editable path="InteractableTest"]
