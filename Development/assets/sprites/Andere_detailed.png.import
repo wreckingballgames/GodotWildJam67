@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6grikndlwu3w"
-path="res://.godot/imported/Andere_overworld.png-4a6a15a721d0231bf463beb1ef7730c3.ctex"
+path="res://.godot/imported/Andere_detailed.png-2275370e2f899453aee5c954e5502bbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Andere_overworld.png"
-dest_files=["res://.godot/imported/Andere_overworld.png-4a6a15a721d0231bf463beb1ef7730c3.ctex"]
+source_file="res://assets/sprites/Andere_detailed.png"
+dest_files=["res://.godot/imported/Andere_detailed.png-2275370e2f899453aee5c954e5502bbe.ctex"]
 
 [params]
 

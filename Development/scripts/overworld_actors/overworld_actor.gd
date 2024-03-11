@@ -51,9 +51,9 @@ func handle_movement(command: MoveCommand) -> void:
 
 func update_obstacle_collider_position() -> void:
     if forward == Vector2.LEFT or forward == Vector2.RIGHT:
-        obstacle_collider.global_position = global_position + (forward * GlobalData.ActorInfo.ACTOR_WIDTH)
+        obstacle_collider.global_position = global_position + (forward * GlobalData.TileInfo.TILE_CENTER_X)
     if forward == Vector2.UP or forward == Vector2.DOWN:
-        obstacle_collider.global_position = global_position + (forward * GlobalData.ActorInfo.ACTOR_HEIGHT)
+        obstacle_collider.global_position = global_position + (forward * GlobalData.TileInfo.TILE_CENTER_Y)
 
 
 func _on_obstacle_collider_body_entered(body: Node2D) -> void:
@@ -78,9 +78,9 @@ func enforce_screen_bounds() -> void:
     if global_position.x < viewport_rect.position.x:
         global_position.x = viewport_rect.position.x
     elif global_position.x >= viewport_rect.size.x:
-        global_position.x = viewport_rect.size.x - GlobalData.ActorInfo.ACTOR_WIDTH
+        global_position.x = viewport_rect.size.x - GlobalData.TileInfo.TILE_WIDTH
     
     if global_position.y < viewport_rect.position.y:
         global_position.y = viewport_rect.position.y
     elif global_position.y >= viewport_rect.size.y:
-        global_position.y = viewport_rect.size.y - GlobalData.ActorInfo.ACTOR_HEIGHT
+        global_position.y = viewport_rect.size.y - GlobalData.TileInfo.TILE_HEIGHT
