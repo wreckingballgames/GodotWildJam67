@@ -14,9 +14,3 @@ enum TileInfo
     TILE_CENTER_X = TILE_WIDTH / 2,
     TILE_CENTER_Y = TILE_HEIGHT / 2,
 }
-
-enum ActorInfo
-{
-    ACTOR_WIDTH = 32,
-    ACTOR_HEIGHT = 64,
-}
