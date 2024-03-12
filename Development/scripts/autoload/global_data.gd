@@ -18,9 +18,11 @@ enum TileInfo
 enum EventID
 {
     NoEvent,
+    TransitionToField,
     TransitionToTown,
     TransitionToFortFloor1,
 }
 
-var ScenePaths = {"town": "res://scenes/maps/town.tscn",
+var ScenePaths = {"field": "res://scenes/maps/field.tscn",
+        "town": "res://scenes/maps/town.tscn",
         "fort_floor1": "res://scenes/maps/fort_floor1.tscn"}

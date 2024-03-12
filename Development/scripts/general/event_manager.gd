@@ -15,6 +15,8 @@ func _process(delta: float) -> void:
     match event_to_trigger:
         GlobalData.EventID.NoEvent:
             pass
+        GlobalData.EventID.TransitionToField:
+            transition_to_scene("field")
         GlobalData.EventID.TransitionToTown:
             transition_to_scene("town")
         GlobalData.EventID.TransitionToFortFloor1:

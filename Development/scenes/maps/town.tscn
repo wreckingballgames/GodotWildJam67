@@ -1,9 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://1aeffbbwi1i3"]
+[gd_scene load_steps=4 format=3 uid="uid://1aeffbbwi1i3"]
 
 [ext_resource type="PackedScene" uid="uid://d2nt3tjerrerm" path="res://scenes/maps/world.tscn" id="1_g5qo8"]
+[ext_resource type="PackedScene" uid="uid://tsy60efceyyi" path="res://scenes/overworld/trigger_zone.tscn" id="2_c2kur"]
 [ext_resource type="TileSet" uid="uid://n3iwxkx3ulvv" path="res://resources/default_overworld_tileset.tres" id="2_lgefm"]
 
 [node name="Town" instance=ExtResource("1_g5qo8")]
+
+[node name="TransitionToField" parent="TriggerZones" index="0" instance=ExtResource("2_c2kur")]
+position = Vector2(16, 208)
+event_id = 1
+
+[node name="TransitionToField2" parent="TriggerZones" index="1" instance=ExtResource("2_c2kur")]
+position = Vector2(16, 240)
+event_id = 1
+
+[node name="TransitionToField3" parent="TriggerZones" index="2" instance=ExtResource("2_c2kur")]
+position = Vector2(16, 272)
+event_id = 1
 
 [node name="TileMap" parent="." index="2"]
 tile_set = ExtResource("2_lgefm")
@@ -19,4 +32,4 @@ layer_4/name = "signs"
 layer_4/tile_data = PackedInt32Array(458768, 393217, 1, 720906, 327681, 1)
 
 [node name="OverworldPlayer" parent="." index="3"]
-position = Vector2(15, 208)
+position = Vector2(47, 208)

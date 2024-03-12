@@ -10,15 +10,15 @@
 
 [node name="TransitionToTownTriggerZone" parent="TriggerZones" index="0" instance=ExtResource("5_f2at2")]
 position = Vector2(560, 272)
-event_id = 1
+event_id = 2
 
 [node name="TransitionToTownTriggerZone2" parent="TriggerZones" index="1" instance=ExtResource("5_f2at2")]
 position = Vector2(592, 272)
-event_id = 1
+event_id = 2
 
 [node name="TransitionToFort" parent="TriggerZones" index="2" instance=ExtResource("5_f2at2")]
 position = Vector2(80, 81)
-event_id = 2
+event_id = 3
 
 [node name="InteractableTest" parent="." index="2" node_paths=PackedStringArray("controller") instance=ExtResource("3_teob0")]
 position = Vector2(272, 144)
