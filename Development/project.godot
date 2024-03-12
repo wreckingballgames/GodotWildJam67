@@ -19,6 +19,7 @@ config/icon="res://assets/sprites/Tranger_portrait.png"
 
 GlobalData="*res://scripts/autoload/global_data.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+EventBus="*res://scripts/autoload/event_bus.gd"
 
 [dialogic]
 
