@@ -8,13 +8,17 @@
 
 [node name="Field" instance=ExtResource("1_70f8m")]
 
-[node name="MoveToTownTriggerZone" parent="TriggerZones" index="0" instance=ExtResource("5_f2at2")]
-unique_name_in_owner = true
+[node name="TransitionToTownTriggerZone" parent="TriggerZones" index="0" instance=ExtResource("5_f2at2")]
 position = Vector2(560, 272)
+event_id = 1
 
-[node name="MoveToTownTriggerZone2" parent="TriggerZones" index="1" instance=ExtResource("5_f2at2")]
-unique_name_in_owner = true
+[node name="TransitionToTownTriggerZone2" parent="TriggerZones" index="1" instance=ExtResource("5_f2at2")]
 position = Vector2(592, 272)
+event_id = 1
+
+[node name="TransitionToFort" parent="TriggerZones" index="2" instance=ExtResource("5_f2at2")]
+position = Vector2(80, 81)
+event_id = 2
 
 [node name="InteractableTest" parent="." index="2" node_paths=PackedStringArray("controller") instance=ExtResource("3_teob0")]
 position = Vector2(272, 144)

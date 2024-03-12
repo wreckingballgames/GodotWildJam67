@@ -2,7 +2,9 @@ class_name TriggerZone
 extends Area2D
 
 
-signal event_triggered(trigger_zone: TriggerZone)
+signal event_triggered(event_id: GlobalData.EventID)
+
+@export var event_id: GlobalData.EventID
 
 
 func _ready() -> void:
@@ -10,4 +12,4 @@ func _ready() -> void:
 
 
 func _on_trigger_zone_area_entered(area: Node2D) -> void:
-    event_triggered.emit(self)
+    event_triggered.emit(event_id)
