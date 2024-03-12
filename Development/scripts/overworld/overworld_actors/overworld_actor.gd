@@ -7,7 +7,7 @@ extends Node2D
 @export var trigger_collider: Area2D
 @export var hazard_collider: Area2D
 
-var forward: Vector2 = Vector2.RIGHT
+var forward: Vector2 = Vector2.LEFT
 var is_obstacle_ahead: bool = false
 
 
