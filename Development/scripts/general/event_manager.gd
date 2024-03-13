@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 
 func _on_event_triggered(event_id: GlobalData.EventID) -> void:
     event_to_trigger = event_id
-        
+
 
 func transition_to_scene(scene_path: String):
     get_tree().call_deferred("change_scene_to_file", GlobalData.ScenePaths[scene_path])
