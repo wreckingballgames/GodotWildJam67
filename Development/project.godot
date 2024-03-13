@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="StuckOnYou"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://scenes/maps/field.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://assets/sprites/Tranger_portrait.png"
 
