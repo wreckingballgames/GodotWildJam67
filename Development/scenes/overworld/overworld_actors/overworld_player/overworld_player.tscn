@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://gyq4s1c4pcig"]
+[gd_scene load_steps=7 format=3 uid="uid://gyq4s1c4pcig"]
 
 [ext_resource type="PackedScene" uid="uid://t4c1xjtmqty3" path="res://scenes/overworld/overworld_actors/overworld_actor.tscn" id="1_bg7q0"]
 [ext_resource type="Script" path="res://scripts/overworld/overworld_actors/overworld_player/overworld_player.gd" id="2_36iq2"]
+[ext_resource type="Texture2D" uid="uid://dd5bcajmwt2sd" path="res://assets/sprites/Andere_overworld_tile_size.png" id="3_hfjnl"]
 [ext_resource type="PackedScene" uid="uid://b5lh71kpe0ne7" path="res://scenes/overworld/overworld_actors/overworld_player/overworld_player_controller.tscn" id="3_pmcjl"]
 [ext_resource type="Shape2D" uid="uid://c2ywddh4nihmd" path="res://resources/shapes/collider_shape.tres" id="4_j5aq6"]
+[ext_resource type="Texture2D" uid="uid://bo5p2ng4dr540" path="res://assets/sprites/Andere_overworld_tile_size_back.png" id="4_lsux2"]
 
 [node name="OverworldPlayer" node_paths=PackedStringArray("interact_collider", "controller") instance=ExtResource("1_bg7q0")]
 script = ExtResource("2_36iq2")
 interact_collider = NodePath("InteractCollider")
+front_sprite = ExtResource("3_hfjnl")
+back_sprite = ExtResource("4_lsux2")
 controller = NodePath("OverworldPlayerController")
 
 [node name="OverworldPlayerController" parent="." index="0" instance=ExtResource("3_pmcjl")]

@@ -2,6 +2,8 @@ class_name OverworldActor
 extends Node2D
 
 
+@export var front_sprite: Texture2D
+@export var back_sprite: Texture2D
 @export var controller: OverworldActorController
 @export var obstacle_collider: Area2D
 @export var trigger_collider: Area2D
@@ -9,6 +11,8 @@ extends Node2D
 
 var forward: Vector2 = Vector2.LEFT
 var is_obstacle_ahead: bool = false
+
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 
 func _ready() -> void:
@@ -36,7 +40,7 @@ func handle_movement(command: MoveCommand) -> void:
     # If forward is not the same direction as command direction, turn, don't move
     # Otherwise, move in that direction (i.e., the direction the actor is already facing)
     if forward != command.direction:
-        forward = command.direction
+        _turn(command.direction)
         return
     
     if is_obstacle_ahead:
@@ -71,3 +75,17 @@ func _on_obstacle_collider_body_entered(body: Node2D) -> void:
 
 func _on_obstacle_collider_body_exited(body: Node2D) -> void:
     is_obstacle_ahead = false
+
+
+func _turn(direction: Vector2) -> void:
+    forward = direction
+    
+    if forward == Vector2.LEFT:
+        sprite_2d.flip_h = false
+    elif forward == Vector2.RIGHT:
+        sprite_2d.flip_h = true
+    
+    if forward == Vector2.UP:
+        sprite_2d.texture = back_sprite
+    elif forward == Vector2.DOWN:
+        sprite_2d.texture = front_sprite
