@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CombatParticipantStatistics" load_steps=2 format=3 uid="uid://pydghwa3o83f"]
+
+[ext_resource type="Script" path="res://resources/combat_statistics/combat_participant_statistics.gd" id="1_d1luf"]
+
+[resource]
+script = ExtResource("1_d1luf")
+strength = 0
+agility = 0
+toughness = 0
+experience_points = 0
+experience_level = 0
+max_health = 0
+current_health = 0
+max_tp = 0
+current_tp = 0
