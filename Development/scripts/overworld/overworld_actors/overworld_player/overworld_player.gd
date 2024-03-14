@@ -5,6 +5,7 @@ extends OverworldActor
 @export var interact_collider: Area2D
 
 var target_interactable: Node2D
+var persistent_statistics: PlayerPersistentStatistics = preload("res://resources/player/player_persistent_statistics.tres")
 
 
 func _ready() -> void:
