@@ -2,7 +2,7 @@ class_name Item
 extends Resource
 
 
-enum ItemType
+enum Type
 {
     CONSUMABLE,
     EQUIPMENT,
@@ -10,4 +10,6 @@ enum ItemType
 }
 
 @export var id: int
-@export var type: ItemType
+@export var type: Type
+@export var name: String
+@export var description: String
