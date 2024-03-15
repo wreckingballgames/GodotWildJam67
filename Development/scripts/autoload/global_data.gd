@@ -24,8 +24,8 @@ var ScenePaths = {"field": "res://scenes/maps/field.tscn",
         "town": "res://scenes/maps/town.tscn",
         "fort_floor1": "res://scenes/maps/fort_floor1.tscn",
         "fort_floor2": "res://scenes/maps/fort_floor2.tscn",
-        "zapling_battle": "FIXME",
-        "boss_battle": "FIXME"}
+        "zapling_battle": "res://scenes/battle/zapling_battle.tscn",
+        "boss_battle": "res://scenes/battle/boss_battle.tscn"}
 
 enum EquipmentSlot
 {
