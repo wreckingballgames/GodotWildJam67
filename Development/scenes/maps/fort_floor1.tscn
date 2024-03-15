@@ -1,9 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://ixplu04pq4vq"]
+[gd_scene load_steps=4 format=3 uid="uid://ixplu04pq4vq"]
 
 [ext_resource type="PackedScene" uid="uid://d2nt3tjerrerm" path="res://scenes/maps/world.tscn" id="1_8i2qn"]
 [ext_resource type="TileSet" uid="uid://77qghkf1wr2j" path="res://resources/default_dungeon_tileset.tres" id="2_2hnlo"]
+[ext_resource type="PackedScene" uid="uid://tsy60efceyyi" path="res://scenes/overworld/trigger_zone.tscn" id="2_6ld4y"]
 
 [node name="FortFloor1" instance=ExtResource("1_8i2qn")]
+
+[node name="TransitionToField" parent="TriggerZones" index="0" instance=ExtResource("2_6ld4y")]
+position = Vector2(272, 496)
+event_id = 1
+
+[node name="TransitionToField2" parent="TriggerZones" index="1" instance=ExtResource("2_6ld4y")]
+position = Vector2(304, 496)
+event_id = 1
+
+[node name="TransitionToField3" parent="TriggerZones" index="2" instance=ExtResource("2_6ld4y")]
+position = Vector2(336, 496)
+event_id = 1
 
 [node name="TileMap" parent="." index="2"]
 tile_set = ExtResource("2_2hnlo")
