@@ -1,7 +1,7 @@
 extends Node
 
 
-var event_to_trigger: GlobalData.EventID = GlobalData.EventID.NoEvent
+var event_to_trigger: GlobalData.EventID = GlobalData.EventID.NO_EVENT
 
 
 func _ready():
@@ -13,15 +13,15 @@ func _ready():
 
 func _process(delta: float) -> void:
     match event_to_trigger:
-        GlobalData.EventID.NoEvent:
+        GlobalData.EventID.NO_EVENT:
             pass
-        GlobalData.EventID.TransitionToField:
+        GlobalData.EventID.TRANSITION_TO_FIELD:
             transition_to_scene("field")
-        GlobalData.EventID.TransitionToTown:
+        GlobalData.EventID.TRANSITION_TO_TOWN:
             transition_to_scene("town")
-        GlobalData.EventID.TransitionToFortFloor1:
+        GlobalData.EventID.TRANSITION_TO_FORT_FLOOR_1:
             transition_to_scene("fort_floor1")
-        GlobalData.EventID.TransitionToFortFloor2:
+        GlobalData.EventID.TRANSITION_TO_FORT_FLOOR_2:
             transition_to_scene("fort_floor2")
 
 

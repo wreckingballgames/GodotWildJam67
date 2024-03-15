@@ -11,11 +11,11 @@ enum TileInfo
 
 enum EventID
 {
-    NoEvent,
-    TransitionToField,
-    TransitionToTown,
-    TransitionToFortFloor1,
-    TransitionToFortFloor2,
+    NO_EVENT,
+    TRANSITION_TO_FIELD,
+    TRANSITION_TO_TOWN,
+    TRANSITION_TO_FORT_FLOOR_1,
+    TRANSITION_TO_FORT_FLOOR_2,
 }
 
 var ScenePaths = {"field": "res://scenes/maps/field.tscn",
