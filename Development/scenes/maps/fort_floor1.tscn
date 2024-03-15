@@ -6,15 +6,17 @@
 
 [node name="FortFloor1" instance=ExtResource("1_8i2qn")]
 
-[node name="TransitionToField" parent="TriggerZones" index="0" instance=ExtResource("2_6ld4y")]
+[node name="TransitionToField" type="Node" parent="TriggerZones" index="0"]
+
+[node name="TransitionToField" parent="TriggerZones/TransitionToField" index="0" instance=ExtResource("2_6ld4y")]
 position = Vector2(272, 496)
 event_id = 1
 
-[node name="TransitionToField2" parent="TriggerZones" index="1" instance=ExtResource("2_6ld4y")]
+[node name="TransitionToField2" parent="TriggerZones/TransitionToField" index="1" instance=ExtResource("2_6ld4y")]
 position = Vector2(304, 496)
 event_id = 1
 
-[node name="TransitionToField3" parent="TriggerZones" index="2" instance=ExtResource("2_6ld4y")]
+[node name="TransitionToField3" parent="TriggerZones/TransitionToField" index="2" instance=ExtResource("2_6ld4y")]
 position = Vector2(336, 496)
 event_id = 1
 
