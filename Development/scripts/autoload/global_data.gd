@@ -15,11 +15,13 @@ enum EventID
     TransitionToField,
     TransitionToTown,
     TransitionToFortFloor1,
+    TransitionToFortFloor2,
 }
 
 var ScenePaths = {"field": "res://scenes/maps/field.tscn",
         "town": "res://scenes/maps/town.tscn",
-        "fort_floor1": "res://scenes/maps/fort_floor1.tscn"}
+        "fort_floor1": "res://scenes/maps/fort_floor1.tscn",
+        "fort_floor2": "res://scenes/maps/fort_floor2.tscn"}
 
 enum EquipmentSlot
 {

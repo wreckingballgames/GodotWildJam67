@@ -21,6 +21,8 @@ func _process(delta: float) -> void:
             transition_to_scene("town")
         GlobalData.EventID.TransitionToFortFloor1:
             transition_to_scene("fort_floor1")
+        GlobalData.EventID.TransitionToFortFloor2:
+            transition_to_scene("fort_floor2")
 
 
 func _on_event_triggered(event_id: GlobalData.EventID) -> void:

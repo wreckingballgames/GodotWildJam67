@@ -20,6 +20,16 @@ event_id = 1
 position = Vector2(336, 496)
 event_id = 1
 
+[node name="TransitionToFortFloor2" type="Node" parent="TriggerZones" index="1"]
+
+[node name="TransitionToFortFloor2" parent="TriggerZones/TransitionToFortFloor2" index="0" instance=ExtResource("2_6ld4y")]
+position = Vector2(272, 16)
+event_id = 4
+
+[node name="TransitionToFortFloor3" parent="TriggerZones/TransitionToFortFloor2" index="1" instance=ExtResource("2_6ld4y")]
+position = Vector2(304, 16)
+event_id = 4
+
 [node name="TileMap" parent="." index="2"]
 tile_set = ExtResource("2_2hnlo")
 layer_0/name = "pit"
