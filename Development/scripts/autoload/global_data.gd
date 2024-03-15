@@ -16,12 +16,16 @@ enum EventID
     TRANSITION_TO_TOWN,
     TRANSITION_TO_FORT_FLOOR_1,
     TRANSITION_TO_FORT_FLOOR_2,
+    BEGIN_ZAPLING_BATTLE,
+    BEGIN_BOSS_BATTLE,
 }
 
 var ScenePaths = {"field": "res://scenes/maps/field.tscn",
         "town": "res://scenes/maps/town.tscn",
         "fort_floor1": "res://scenes/maps/fort_floor1.tscn",
-        "fort_floor2": "res://scenes/maps/fort_floor2.tscn"}
+        "fort_floor2": "res://scenes/maps/fort_floor2.tscn",
+        "zapling_battle": "FIXME",
+        "boss_battle": "FIXME"}
 
 enum EquipmentSlot
 {

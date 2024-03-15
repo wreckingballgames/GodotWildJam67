@@ -23,11 +23,15 @@ func _process(delta: float) -> void:
             transition_to_scene("fort_floor1")
         GlobalData.EventID.TRANSITION_TO_FORT_FLOOR_2:
             transition_to_scene("fort_floor2")
+        GlobalData.EventID.BEGIN_ZAPLING_BATTLE:
+            transition_to_scene("zapling_battle")
+        GlobalData.EventID.BEGIN_BOSS_BATTLE:
+            transition_to_scene("boss_battle")
 
 
 func _on_event_triggered(event_id: GlobalData.EventID) -> void:
     event_to_trigger = event_id
 
 
-func transition_to_scene(scene_path: String):
-    get_tree().call_deferred("change_scene_to_file", GlobalData.ScenePaths[scene_path])
+func transition_to_scene(scene_name: String):
+    get_tree().call_deferred("change_scene_to_file", GlobalData.ScenePaths[scene_name])
