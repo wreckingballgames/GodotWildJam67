@@ -3,4 +3,4 @@ extends Command
 
 
 func _init() -> void:
-    type = GlobalData.CommandType.Interact
+    type = CommandType.INTERACT

@@ -1,12 +1,6 @@
 extends Node
 
 
-enum CommandType
-{
-    Move,
-    Interact,
-}
-
 enum TileInfo
 {
     TILE_WIDTH = 32,
@@ -26,3 +20,11 @@ enum EventID
 var ScenePaths = {"field": "res://scenes/maps/field.tscn",
         "town": "res://scenes/maps/town.tscn",
         "fort_floor1": "res://scenes/maps/fort_floor1.tscn"}
+
+enum EquipmentSlot
+{
+    WEAPON,
+    ARMOR,
+    ACCESSORY_1,
+    ACCESSORY_2,
+}

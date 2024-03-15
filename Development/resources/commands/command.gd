@@ -2,4 +2,10 @@ class_name Command
 extends RefCounted
 
 
-var type: GlobalData.CommandType
+enum CommandType
+{
+    MOVE,
+    INTERACT,
+}
+
+var type: CommandType
