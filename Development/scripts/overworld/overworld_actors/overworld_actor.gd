@@ -27,9 +27,9 @@ func _physics_process(delta: float) -> void:
 
 
 func on_command_received(command: Command) -> void:
-    if command.type == GlobalData.CommandType.Move:
+    if command.type == command.CommandType.MOVE:
         handle_movement(command as MoveCommand)
-    elif command.type == GlobalData.CommandType.Interact:
+    elif command.type == command.CommandType.INTERACT:
         handle_interaction()
 
 
