@@ -1,0 +1,42 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "field.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "default.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 3
+        },
+        "field.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 324.6666666666667,
+                "y": 237.3333333333333
+            }
+        }
+    },
+    "last.imagePath": "C:/Users/micro/OneDrive/Documents/repos/GodotWildJam67/Development/assets/sprites",
+    "map.height": 16,
+    "map.lastUsedFormat": "tmx",
+    "map.width": 20,
+    "openFiles": [
+        "default.tsx",
+        "field.tmx"
+    ],
+    "project": "overworld.tiled-project",
+    "property.type": "string",
+    "recentFiles": [
+        "default.tsx",
+        "field.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.type": 1
+}

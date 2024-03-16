@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://qaismx24xads"]
+
+[ext_resource type="Script" path="res://scripts/overworld/overworld_actors/overworld_actor_controller.gd" id="1_vmru2"]
+
+[node name="OverworldActorController" type="Node"]
+script = ExtResource("1_vmru2")

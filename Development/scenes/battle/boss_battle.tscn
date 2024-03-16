@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0cqqnit7f6jd"]
+
+[ext_resource type="PackedScene" uid="uid://ja6t4k2w0f7o" path="res://scenes/battle/battle.tscn" id="1_lf6oq"]
+
+[node name="BossBattle" instance=ExtResource("1_lf6oq")]

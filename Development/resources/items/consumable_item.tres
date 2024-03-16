@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ConsumableItem" load_steps=2 format=3 uid="uid://ba3mapvn5rih1"]
+
+[ext_resource type="Script" path="res://resources/items/consumable_item.gd" id="1_20bqv"]
+
+[resource]
+script = ExtResource("1_20bqv")
+id = 0
+type = 0

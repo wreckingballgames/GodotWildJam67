@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PlayerCombatStatistics" load_steps=2 format=3 uid="uid://cgigirnvudugg"]
+
+[ext_resource type="Script" path="res://resources/player/player_combat_statistics.gd" id="1_pcwdr"]
+
+[resource]
+script = ExtResource("1_pcwdr")
+strength = 0
+agility = 0
+toughness = 0
+experience_points = 0
+experience_level = 0
+max_health = 0
+current_health = 0
+max_tp = 0
+current_tp = 0

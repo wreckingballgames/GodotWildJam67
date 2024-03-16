@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://tsy60efceyyi"]
+
+[ext_resource type="Shape2D" uid="uid://boygt5yjj4r15" path="res://resources/shapes/tile_shape.tres" id="1_1wadp"]
+[ext_resource type="Script" path="res://scripts/overworld/trigger_zone.gd" id="1_6xl62"]
+
+[node name="TriggerZone" type="Area2D" groups=["trigger_zone"]]
+collision_layer = 4
+script = ExtResource("1_6xl62")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("1_1wadp")
